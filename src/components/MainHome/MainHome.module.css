@@ -1,0 +1,160 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Section Home */
+.home {
+  background-image: url('../../images/gym14.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.homeContent {
+  color: white;
+  max-width: 600px;
+}
+
+.homeContent h1 {
+  position: relative;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.homeContent h3 {
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fffb00;
+}
+
+.homeContent p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.homeContent .btnBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.btnBox a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #fffb00;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.btnBox a:hover {
+  color: #fffb00;
+  border: 2px solid #fffb00;
+}
+
+.btnBox a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  z-index: -1;
+  transition: .5s;
+  animation: manipActiveHover .1s forwards; 
+  animation-delay: 4s;
+  pointer-events: none;
+}
+
+.btnBox a:hover::before {
+  width: 100%;
+}
+
+/* Iconos  */
+.homeSci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeSci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fffb00;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fffb00;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.homeSci a:hover {
+  color: #000000;
+}
+
+.homeSci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fffb00;
+  z-index: -1;
+  transition: .5s;
+}
+
+.homeSci a:hover::before {
+  width: 100%;
+}
+
+/* Animation Logo */
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes manipActiveHover {
+  100% {
+    pointer-events: auto;
+  }
+}

@@ -1,0 +1,40 @@
+import React from 'react'
+import styles from './Footer.module.css'
+import LogoAS from '../../images/Icon/LogoAS.png'
+export const Footer = () => {
+  return (
+    <footer>
+      <div className={styles.main}>
+
+        <div className={styles.leftContainer}>
+          <img src={LogoAS} alt='LogoAS' />
+          <p>Hard work beats talent when talent doesn't want to work hard, choose how you want to treat your body, go to next level.</p>
+          <div className={styles.homeSci}>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/'><i className='bx bxl-facebook' /></a>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/antonio-silva-developer/'><i className='bx bxl-linkedin' /></a>
+            <a target='_blank' rel='noopener noreferrer' href='https://github.com/Asilvazavala'><i className='bx bxl-github' /></a>
+          </div>
+          <p>Privacy Policy | © 2023 Gym AS <br />Design by Antonio Silva  </p>
+        </div>
+
+        <div className={styles.centerContainer}>
+          <h3>Our Classes</h3>
+          <p>Fitness</p>
+          <p>Aerobics</p>
+          <p>Yoga</p>
+          <p>Full-body Strength</p>
+          <p>Learn Machines</p>
+        </div>
+
+        <div className={styles.rightContainer}>
+          <h3>Working Hours</h3>
+          <p className={styles.dayTitle}>Monday - Friday:</p>
+          <p>7:00am - 21:00pm</p>
+          <p className={styles.dayTitle}>Saturday:</p>
+          <p>7:00am - 19:00pm</p>
+          <p className={styles.dayTitle}>Sunday - Closed</p>
+        </div>
+      </div>
+    </footer>
+  )
+}

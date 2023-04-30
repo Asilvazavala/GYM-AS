@@ -1,0 +1,103 @@
+.main h1 {
+  padding-left: 5%;
+  margin-top: 100px;
+  text-decoration: underline #fffb00 10px;
+}
+
+.cardsContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(255, 255, 255);
+  display: flex;
+  gap: 2%;
+}
+
+.card1 {
+  background-image: url('../../images/gym13.jpg');
+}
+
+.card2 {
+  background-image: url('../../images/Home/Karate.jpg');
+}
+
+.card3 {
+  background-image: url('../../images/Home/box.jpg');
+}
+
+.card4 {
+  background-image: url('../../images/Home/Cycling.jpg');
+}
+
+.card5 {
+  background-image: url('../../images/gym11.jpg');
+}
+
+.card6 {
+  background-image: url('../../images/gym12.jpg');
+}
+
+.card1,
+.card6 {
+  width: 50%;
+  height: 300px;
+  padding: 20px 20px;
+  position: relative;
+  transition: .7s linear; 
+  object-fit: cover;
+  box-shadow: inset 2px 2px 8px 160px rgba(0,0,0,.2);
+  overflow: hidden;
+  background-position: 50%;
+  background-size: cover;
+  cursor: pointer;
+  filter: grayscale(0);
+}
+
+.card2,
+.card3,
+.card4,
+.card5 {
+  width: 25%;
+  height: 300px;
+  padding: 20px 20px;
+  position: relative;
+  transition: .7s linear; 
+  object-fit: cover;
+  background-size: cover;
+  box-shadow: inset 2px 2px 8px 160px rgba(0,0,0,.2);
+  overflow: hidden;
+  background-position: 50%;
+  background-size: cover;
+  cursor: pointer;
+  filter: grayscale(0);
+}
+
+.cardsContainer span {
+  font-size: 15px;
+  color: black;
+  padding: 3px;
+  background: #fffb00;
+  position: absolute;
+  top: 85%;
+  left: 5%;
+}
+
+.cardsContainer h2 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 3px;
+  position: absolute;
+  top: 75%;
+  left: 5%;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover {
+  filter: grayscale(1);
+  transition: .7s linear;
+}

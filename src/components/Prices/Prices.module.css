@@ -1,0 +1,142 @@
+.containerPrices {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.containerPrices h1 {
+  padding-left: 5%;
+  margin-top: 30px;
+  text-decoration: underline #fffb00 10px;
+  font-size: 30px;
+}
+
+/* Section Cards */
+.cardsContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min(min(100%, 31%)));
+  gap: 2%;
+}
+
+.card,
+.card2, 
+.card3 {
+  border: 1px solid black;
+  background: white;
+  padding: 0 0 40px 0;
+  text-align: center;  
+  transition: .7s linear;
+  box-shadow: 5px 5px 5px 5px #3337;
+}
+
+.card img,
+.card2 img,
+.card3 img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.cardsContainer h2 {
+  color: #000000;
+  font-weight: 900;
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-decoration: underline #fffb00 10px;
+}
+
+.cardsContainer h3, 
+.cardsContainer p {
+  color: #333333c1;
+  padding: 10px 0;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.cardsContainer h3 {
+  font-size: 25px;
+}
+
+.cardsContainer span {
+  font-size: 45px;
+  color: #000000;
+  margin: 0 10px;
+}
+
+.cardsContainer p {
+  font-size: 18px;
+}
+
+.main h1 {
+  padding-left: 5%;
+  margin-top: 100px;
+  text-decoration: underline #fffb00 10px;
+}
+
+.cardsContainer .card .personalTrainer, 
+.cardsContainer .card2 .personalTrainer, 
+.cardsContainer .card .extraActivity, 
+.cardsContainer .card2 .extraActivity {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.cardsContainer .card .cycling, 
+.cardsContainer .card .weightLossPlan {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+.cardsContainer button {
+  position: relative;
+  margin-top: 20px;
+  padding: 12px 17px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #fffb00;
+  color: #000000;
+  font-weight: 700;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsContainer button:hover {
+  color: #fffb00;
+  border: 2px solid #fffb00;
+}
+
+.cardsContainer button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000000;
+  z-index: -1;
+  transition: .5s;
+  animation: manipActiveHover .5s forwards; 
+  animation-delay: 4s;
+  pointer-events: none;
+}
+
+.cardsContainer button:hover::before {
+  width: 100%;
+}
+
+/* Animation Logo */
+@keyframes manipActiveHover {
+  100% {
+    pointer-events: auto;
+  }
+}
