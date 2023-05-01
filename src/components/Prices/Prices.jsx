@@ -6,6 +6,12 @@ import imgGym3 from '../../images/gym1.jpg'
 import { NavLink } from 'react-router-dom'
 
 export const Prices = () => {
+  const goTop = () => {
+    window.scrollTo({
+      top: 0
+    })
+  }
+
   return (
     <div>
       <section className={styles.containerPrices}>
@@ -22,7 +28,7 @@ export const Prices = () => {
             <p className={styles.personalTrainer}>Personal Trainer</p>
             <p className={styles.extraActivity}>Extra activity free</p>
             <NavLink to='/contact'>
-              <button>BUY NOW</button>
+              <button onClick={goTop}>BUY NOW</button>
             </NavLink>
           </div>
 
@@ -36,7 +42,7 @@ export const Prices = () => {
             <p className={styles.personalTrainer}>Personal Trainer</p>
             <p className={styles.extraActivity}>Extra activity free</p>
             <NavLink to='/contact'>
-              <button>BUY NOW</button>
+              <button onClick={goTop}>BUY NOW</button>
             </NavLink>
           </div>
 
@@ -50,7 +56,7 @@ export const Prices = () => {
             <p className={styles.personalTrainer}>Personal Trainer</p>
             <p className={styles.extraActivity}>Extra activity free</p>
             <NavLink to='/contact'>
-              <button>BUY NOW</button>
+              <button onClick={goTop}>BUY NOW</button>
             </NavLink>
           </div>
         </div>

@@ -51,25 +51,6 @@
   height: auto;
 }
 
-.inputs input {
-  margin-right: 20px;
-  font-size: 15px;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-top: 2px;
-}
-
-.labels label {
-  margin-right: 120px;
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-size: 18px;
-}
-
-.labels span {
-  color: #fffb00;
-}
-
 .main .containerTextButton button {
   position: relative;
   margin-top: 20px;

@@ -1,0 +1,27 @@
+.main {
+  margin: 0;
+  padding: 0;
+}
+
+.main a {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 15px;
+  right: 7px;
+  background: #0df053;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 40px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.main a:hover {
+  text-decoration: none;
+  background: #fff;
+  color: #0df053;
+}

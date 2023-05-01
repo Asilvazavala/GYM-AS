@@ -6,6 +6,7 @@ import { CalculateBMI } from '../../components/CalculateBMI/CalculateBMI'
 import { Testimonials } from '../../components/Testimonials/Testimonials'
 import { Prices } from '../../components/Prices/Prices'
 import { NeedTrainer } from '../../components/NeedTrainer/NeedTrainer'
+import { Whatsapp } from '../../components/Whatsapp/Whatsapp'
 
 export const Home = () => {
   return (
@@ -17,6 +18,7 @@ export const Home = () => {
       <Testimonials />
       <Prices />
       <NeedTrainer />
+      <Whatsapp />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom'
-import styles from './App.module.css'
+import './App.module.css'
 import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Error404 } from './components/Error404/Error404'

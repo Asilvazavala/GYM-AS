@@ -26,6 +26,9 @@ function Navbar () {
     <div>
       <header id='navBar' className={styles.header}>
         <img src={LogoAS} alt='LogoAS' title='Antonio Silva' />
+        <div id='menuIcon' className={styles.menuIcon}>
+          <i className='bx bx-menu' />
+        </div>
         <nav className={styles.navbar}>
           <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
           <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>

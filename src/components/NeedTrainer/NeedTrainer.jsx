@@ -3,6 +3,12 @@ import styles from './NeedTrainer.module.css'
 import imgGym from '../../images/gym7.jpg'
 import { NavLink } from 'react-router-dom'
 export const NeedTrainer = () => {
+  const goTop = () => {
+    window.scrollTo({
+      top: 0
+    })
+  }
+
   return (
     <div className={styles.main}>
       <h1>NEED A TRAINER?</h1>
@@ -14,10 +20,9 @@ export const NeedTrainer = () => {
           <h2>Easily find the right fitness coach for your needs</h2>
           <h3>Call: +123-456789</h3>
           <NavLink to='/contact'>
-            <button>CONTACT NOW</button>
+            <button onClick={goTop}>CONTACT NOW</button>
           </NavLink>
         </div>
-
       </div>
     </div>
   )

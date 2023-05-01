@@ -1,0 +1,139 @@
+.main {
+  margin-top: 30px;
+}
+
+.main h1 {
+  padding-left: 5%;
+  margin-top: 100px;
+  text-decoration: underline #fffb00 10px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Section Cards */
+.cardsContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(0, 0, 0);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min(min(100%, 31%)));
+  gap: 2%;
+}
+
+.cardsContainer .card {
+  border: 1px solid black;
+  border-radius: 20px;
+  background: white;
+  text-align: center;  
+  transition: .7s linear;
+  box-shadow: 4px 4px 4px 4px #3337;
+  overflow: hidden;
+  padding-bottom: 230px;
+}
+
+.cardsContainer .card img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.cardsContainer .card h2 {
+  color: #000;
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 15px;
+  text-decoration: underline #fffb00 10px;
+  margin-bottom: 15px;
+}
+
+.cardsContainer .card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333333c1;
+  font-style: italic;
+  font-weight: 100;
+}
+
+.main .showMore {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .showMore button,
+.cardsContainer button {
+  position: relative;
+  padding: 12px 17px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardsContainer button {
+  background: #fffb00;
+  color: #000000;
+}
+
+.main .showMore button {
+  background: #000000;
+  color: #fffb00;
+  border: 2px solid #fffb00;
+}
+
+.main .showMore button:hover {
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.cardsContainer button:hover {
+  color: #fffb00;
+  border: 2px solid #fffb00;
+}
+
+.main .showMore button::before,
+.cardsContainer button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: .5s;
+  animation: manipActiveHover .5s forwards; 
+  animation-delay: 4s;
+  pointer-events: none;
+}
+
+.cardsContainer button::before {
+  background: #000000;
+}
+
+.main .showMore button::before {
+  background: #fffb00;
+}
+
+.main button:hover::before,
+.cardsContainer button:hover::before {
+  width: 100%;
+}
+
+/* Animation Logo */
+@keyframes manipActiveHover {
+  100% {
+    pointer-events: auto;
+  }
+}

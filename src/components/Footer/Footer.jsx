@@ -1,7 +1,15 @@
 import React from 'react'
 import styles from './Footer.module.css'
 import LogoAS from '../../images/Icon/LogoAS.png'
+import { NavLink } from 'react-router-dom'
+
 export const Footer = () => {
+  const goTop = () => {
+    window.scrollTo({
+      top: 0
+    })
+  }
+
   return (
     <footer>
       <div className={styles.main}>
@@ -19,11 +27,13 @@ export const Footer = () => {
 
         <div className={styles.centerContainer}>
           <h3>Our Classes</h3>
-          <p>Fitness</p>
-          <p>Aerobics</p>
-          <p>Yoga</p>
-          <p>Full-body Strength</p>
-          <p>Learn Machines</p>
+          <NavLink to='/classes' onClick={goTop} style={{ textDecoration: 'none' }}>
+            <p>Fitness</p>
+            <p>Aerobics</p>
+            <p>Yoga</p>
+            <p>Full-body Strength</p>
+            <p>Learn Machines</p>
+          </NavLink>
         </div>
 
         <div className={styles.rightContainer}>
