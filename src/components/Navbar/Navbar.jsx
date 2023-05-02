@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 import LogoAS from '../../images/Icon/LogoAS.png'
+import { NavLink } from 'react-router-dom'
 
 function Navbar () {
   // const BASE_URL = 'http://localhost:3002/'
@@ -49,12 +50,24 @@ function Navbar () {
           <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />
         </div>
         <nav className={isSmallScreen && showNavbar === false ? styles.hide : styles.navbar}>
-          <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
-          <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
-          <a href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
-          <a href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
-          <a href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
-          <a href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
+          <NavLink to='/'>
+            <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
+          </NavLink>
+          <NavLink to='/about'>
+            <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
+          </NavLink>
+          <NavLink to='/gallery'>
+            <a href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
+          </NavLink>
+          <NavLink to='/pricing'>
+            <a href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
+          </NavLink>
+          <NavLink to='/classes'>
+            <a href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
+          </NavLink>
+          <NavLink to='/contact'>
+            <a href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
+          </NavLink>
         </nav>
       </header>
     </div>
