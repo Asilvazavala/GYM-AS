@@ -31,14 +31,16 @@ export const Contact = () => {
       </div>
 
       <div className={styles.rightContainer}>
-        <form>
+        <form action='https://formsubmit.co/asilvazavala@gmail.com' method='POST'>
           <h3>Leave Us Your Info</h3>
-          <input placeholder='Full name...' />
-          <input placeholder='Email...' />
-          <textarea placeholder='Your appreciate comment...' />
+          <input type='text' name='name' id='name' placeholder='Antonio silva...' />
+          <input type='email' name='email' id='email' placeholder='youremail@email.com...' />
+          <textarea name='message' id='message' placeholder='Your appreciate comment...' />
           <div>
-            <button>SUBMIT NOW</button>
+            <input className={styles.buttonForm} onclick={alert('Message submit succesfully, Thanks!')} type="submit" value="SUBMIT NOW" />
           </div>
+          <input type='hidden' name='_next' value='https://gym-as.vercel.app/contact' />
+          <input type='hidden' name='_captcha' value='false' />
         </form>
       </div>
 
