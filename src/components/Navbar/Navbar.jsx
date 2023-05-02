@@ -3,7 +3,8 @@ import styles from './Navbar.module.css'
 import LogoAS from '../../images/Icon/LogoAS.png'
 
 function Navbar () {
-  const BASE_URL = 'http://localhost:3002/'
+  // const BASE_URL = 'http://localhost:3002/'
+  const BASE_URL = 'https://gym-as.vercel.app/'
 
   // Navbar cambia a fondo negro al hacer scroll
   const changeOpacity = (pxPantalla) => {
