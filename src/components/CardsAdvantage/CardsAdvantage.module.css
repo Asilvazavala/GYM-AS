@@ -5,9 +5,9 @@
   padding-left: 5%;
   padding-right: 5%;
   color: rgb(0, 0, 0);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, min(min(100%, 31%)));
-  gap: 2%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .card,
@@ -21,6 +21,9 @@
   text-align: center;  
   transition: .7s linear;
   box-shadow: 4px 4px 4px 4px #3337;
+  flex-basis: 300px;
+  max-width: 350px;
+  flex-grow: 1;
 }
 
 .card:hover h2, 
@@ -82,4 +85,11 @@
   padding-left: 5%;
   margin-top: 100px;
   text-decoration: underline #fffb00 10px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .main h1 {
+    font-size: 25px
+  }
 }

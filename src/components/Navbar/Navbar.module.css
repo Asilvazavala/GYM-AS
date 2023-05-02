@@ -3,7 +3,13 @@
   margin: 0;
   padding: 0;
   box-sizing: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
+}
+
+.hide {
+  display: none;
 }
 
 /* Header */
@@ -11,10 +17,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   padding: 20px 0;
   margin-right: 5%;
   padding-left: 2%;
-  width: 100%;
   background: black;
   display: flex;
   justify-content: space-between;
@@ -78,31 +84,63 @@
 
 /* Responsive */
 @media (max-width: 991px) {
+  .headerOpacity,
   .header {
     padding: 2rem 4%;
-    position: relative;
   }
 }
 
 @media (max-width: 768px) {
+  .headerOpacity img,
+  .header img {
+    position: absolute;
+    top: 10%;
+    left: 3%;  
+  }
+
+  .headerOpacity,
+  .header {
+    min-height: 30px;  
+  }
+  
   .menuIcon {
+    position: absolute;
     display: block;
-    margin-left: 20px;
+    top: 5%;  
+    font-size: 50px;
+    margin-left: 80%;
   }
 
   .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    transition: .25s ease;
+    transition-delay: .25s;
     width: 100%;
-    padding: 1rem 4%;
-    background: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    margin-top: 10%;
   }
 
   .navbar a {
     display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    width: 100%;
+    padding-right: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuIcon {
+    margin-left: 77%;
+  }
+}
+
+@media (max-width: 350px) {
+  .menuIcon {
+    margin-left: 74%;
+  }
+}
+
+@media (max-width: 280px) {
+  .menuIcon {
+    margin-left: 71%;
   }
 }

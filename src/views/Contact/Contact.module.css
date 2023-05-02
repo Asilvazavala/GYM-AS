@@ -66,8 +66,8 @@ body {
 }
 
 .leftContainer .icons a:hover {
-  color: #000000;
-  border: 2px solid #fffb00;
+  color: #fffb00;
+  border: 2px solid #000000;
 }
 
 .leftContainer .icons a::before {
@@ -77,7 +77,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #fffb00;
+  background: #000000;
   z-index: -1;
   transition: .5s;
 }
@@ -170,5 +170,24 @@ body {
 @keyframes manipActiveHover {
   100% {
     pointer-events: auto;
+  }
+}
+
+/* Resposive */
+@media (max-width: 851px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main .leftContainer {
+    width: 100%;
+    padding-right: 5%;
+  }
+
+  .main .rightContainer {
+    width: 100%;
+    margin-right: 5%;
+    margin-top: 30px;
   }
 }

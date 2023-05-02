@@ -15,7 +15,7 @@
 }
 
 .card1 {
-  background-image: url('../../images/gym13.jpg');
+  background-image: url('../../images/gym13.jpeg');
 }
 
 .card2 {
@@ -100,4 +100,39 @@
 .card6:hover {
   filter: grayscale(1);
   transition: .7s linear;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .main .cardsContainer span {
+    font-size: 0.8rem;
+  }
+
+  .cardsContainer {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+
+  .card1,
+  .card6,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    flex-grow: 1;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .card1,
+  .card6,
+  .card2,
+  .card3,
+  .card4,
+  .card5 {
+    flex-basis: 150px;
+    max-width: 200px;
+  }
 }

@@ -109,3 +109,43 @@ body {
   color: #fff;
   font-weight: 900;
 }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .main .rightContainer {
+    padding: 50px 10px 0 20px;
+  }
+  
+}
+
+@media (max-width: 667px) {
+  .main .centerContainer {
+    padding: 50px 10px 0 20px;
+  }
+
+  .main .leftContainer {
+    padding: 50px 10px 0 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 530px) {
+ .main .rightContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+ .main .centerContainer {
+    width: 100%;
+  }
+  .main .rightContainer {
+    width: 100%;
+  }
+}

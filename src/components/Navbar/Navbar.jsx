@@ -1,11 +1,11 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './Navbar.module.css'
 import LogoAS from '../../images/Icon/LogoAS.png'
 
 function Navbar () {
   const BASE_URL = 'http://localhost:3002/'
 
-  // Navbar cambia a fondo negro
+  // Navbar cambia a fondo negro al hacer scroll
   const changeOpacity = (pxPantalla) => {
     window.addEventListener('scroll', () => {
       const scroll = document.documentElement.scrollTop
@@ -19,17 +19,35 @@ function Navbar () {
       }
     })
   }
-
   changeOpacity(50)
+
+  // Estado para mostrar el menú que despliega la Navbar
+  const [showNavbar, setShowNavBar] = useState(false)
+  const showNav = () => {
+    setShowNavBar(!showNavbar)
+  }
+
+  // Estado para mostar NavBar responsive de acuerdo al max-width de la pantalla
+  const [isSmallScreen, setIsSmallScreen] = useState(false)
+  useEffect(() => {
+    function handleResize () {
+      setIsSmallScreen(window.innerWidth < 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+    handleResize()
+
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   return (
     <div>
       <header id='navBar' className={styles.header}>
         <img src={LogoAS} alt='LogoAS' title='Antonio Silva' />
         <div id='menuIcon' className={styles.menuIcon}>
-          <i className='bx bx-menu' />
+          <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />
         </div>
-        <nav className={styles.navbar}>
+        <nav className={isSmallScreen && showNavbar === false ? styles.hide : styles.navbar}>
           <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
           <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
           <a href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>

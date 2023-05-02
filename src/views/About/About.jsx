@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './About.module.css'
-import imgGym from '../../images/gym15.jpg'
-import imgGym2 from '../../images/teamGym.jpg'
+import imgGym from '../../images/teamGym.jpg'
+import imgGym2 from '../../images/gym15.jpg'
 
 export const About = () => {
   return (

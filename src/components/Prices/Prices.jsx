@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Prices.module.css'
 import imgGym from '../../images/gym3.jpg'
-import imgGym2 from '../../images/gym13.jpg'
+import imgGym2 from '../../images/gym13.jpeg'
 import imgGym3 from '../../images/gym1.jpg'
 import { NavLink } from 'react-router-dom'
 

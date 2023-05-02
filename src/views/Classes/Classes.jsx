@@ -6,9 +6,9 @@ import imgGym3 from '../../images/Home/Karate.jpg'
 import imgGym4 from '../../images/gym1.jpg'
 import imgGym5 from '../../images/gym2.jpg'
 import imgGym6 from '../../images/Home/box.jpg'
-import imgGym7 from '../../images/gym14.jpg'
+import imgGym7 from '../../images/gym14.jpeg'
 import imgGym8 from '../../images/gym12.jpg'
-import imgGym9 from '../../images/gym13.jpg'
+import imgGym9 from '../../images/gym13.jpeg'
 import { NavLink } from 'react-router-dom'
 
 export const Classes = () => {

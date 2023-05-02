@@ -48,7 +48,10 @@
 
 .containerImg img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .main .containerTextButton button {
@@ -96,5 +99,28 @@
 @keyframes manipActiveHover {
   100% {
     pointer-events: auto;
+  }
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .containerImg {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .containerTextButton h2 {
+    font-size: 18px;
+  }
+  
+  .containerTextButton h3 {
+    font-size: 23px;
+  }
+
+  .main .containerTextButton button {
+    font-size: 14px;
+    width: 9rem;
+    height: 2.5rem;
   }
 }

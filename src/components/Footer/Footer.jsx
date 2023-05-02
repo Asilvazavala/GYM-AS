@@ -37,7 +37,7 @@ export const Footer = () => {
         </div>
 
         <div className={styles.rightContainer}>
-          <h3>Working Hours</h3>
+          <h3>Work Hours</h3>
           <p className={styles.dayTitle}>Monday - Friday:</p>
           <p>7:00am - 21:00pm</p>
           <p className={styles.dayTitle}>Saturday:</p>

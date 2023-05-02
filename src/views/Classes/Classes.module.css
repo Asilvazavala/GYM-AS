@@ -19,9 +19,9 @@
   padding-left: 5%;
   padding-right: 5%;
   color: rgb(0, 0, 0);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, min(min(100%, 31%)));
-  gap: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .cardsContainer .card {
@@ -33,6 +33,9 @@
   box-shadow: 4px 4px 4px 4px #3337;
   overflow: hidden;
   padding-bottom: 230px;
+  flex-grow: 1;
+  flex-basis: 280px;
+  max-width: 400px;
 }
 
 .cardsContainer .card img {

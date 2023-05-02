@@ -17,9 +17,9 @@ body {
 .container {
   perspective: 1000px;
   padding-left: 5%;
-  width: 3000px;
 
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -114,8 +114,8 @@ body {
   height: 50px;
   width: 50px;
   line-height: 50px;
-  text-align: center;
   font-size: 20px;
+  text-align: center;
   background: #333;
   color: #fffb00;
   cursor: pointer;
@@ -136,4 +136,66 @@ body {
 .main .prev:hover {
   color: #333;
   background: #fffb00;
+}
+
+/* Responsive */
+@media (max-width: 1230px) {
+  .main .next,
+  .main .prev {
+    top: 58%;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 19px;  
+  }
+}
+
+@media (max-width: 650px) {
+  .main h1 {
+    font-size: 30px;
+  }
+
+  .container .slideContainer {
+    display: flex;
+  }
+
+  .container .slideContainer .slide {
+    max-width: 450px;
+    padding: 20px;
+    margin-right: 10%;
+    flex-basis: 250px;
+    flex-grow: 1;
+  }
+
+  .container .slideContainer .slide .quotes {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+    .container .slideContainer .slide .quotes {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+    .container .slideContainer .slide .quotes {
+    font-size: 30px;
+    top: 7px;
+    right: 12px;  
+  }
+}
+
+@media (max-width: 276px) {
+    .container .slideContainer .slide .quotes {
+    font-size: 28px;
+    top: 5px;
+    right: 8px;  
+  }
+
+  .container .slideContainer .slide .user .userInfo h3,
+  .container .slideContainer .slide .user .userInfo .stars i {
+    font-size: 16px;
+  }
+  
 }

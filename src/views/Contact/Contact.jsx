@@ -15,7 +15,7 @@ export const Contact = () => {
           </div>
           <div className={styles.infoTop}>
             <h3>Opening Hours</h3>
-            <p>Mon to Fri: 7:30 am - 1:00 am <br />Sat: 7:30 am — 00:00 am</p>
+            <p>Mon to Fri: 7:00 am — 21:00 pm <br />Saturday: 7:00 am — 19:00 pm</p>
           </div>
           <div className={styles.infoBottom}>
             <h3>Information</h3>

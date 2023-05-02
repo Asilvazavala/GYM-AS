@@ -21,7 +21,6 @@
   width: 0;
   flex-grow: 1;
   object-fit: cover;
-  opacity: .8;
   transition: .5s ease;
 }
 
@@ -102,4 +101,74 @@
 .prev:hover {
   color: #fffb00;
   background: #000;
+}
+
+/* Responsive */
+@media (max-width: 1150px) {
+  .main section {
+    padding-right: 5%;
+  }
+}
+@media (max-width: 1000px) {
+  .main section {
+    padding-right: 5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .main section img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    flex-grow: 0;
+    object-fit: cover;
+    transition: .5s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .next,
+  .close,
+  .prev {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 15px;
+  }
+
+  .close {
+    top: 15%;
+    }
+}
+
+@media (max-width: 450px) {
+  .close {
+    top: 20%;
+    }
+
+    .next,
+    .prev {
+      top: 45%;
+    }
+}
+
+@media (max-width: 410px) {
+  .close {
+    top: 25%;
+    }
+}
+
+@media (max-width: 350px) {
+  .close {
+    top: 28%;
+    }
+
+  .next,
+  .close,
+  .prev {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+  }
 }

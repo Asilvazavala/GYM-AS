@@ -1,10 +1,13 @@
 # GYM AS
-<img src="./images/Icon/LogoAS.png" width="50px" height="50px" alt="Logo" />
-Hi, this gym provide a space for people to improve their physical fitness and overall health through regular exercise and physical activity, 
+<p>Hi, this website provide a space for people to improve their physical fitness and overall health through regular exercise and physical activity, with a user friendly interface</p>
 
-Build with:
-<p>» Javascript</p>
-<p>» React</p> 
-<p>» CSS Modules</p>
+# BUILD WITH:
+<p>Javascript</p>
+<p>React</p> 
+<p>CSS Modules</p>
 
-Live Demo: <a href="" >GYM AS</a>
+# DEPENDENCIES TO RUN THE PROJECT: 
+<p>React Router DOM: npm i react-router-dom</p>
+
+# LIVE DEMO: 
+<a href="" >GYM AS</a>

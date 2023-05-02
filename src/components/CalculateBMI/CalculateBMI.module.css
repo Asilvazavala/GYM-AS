@@ -43,7 +43,10 @@
 
 .containerImg img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .inputs input {
@@ -110,5 +113,53 @@
 @keyframes manipActiveHover {
   100% {
     pointer-events: auto;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .inputs input {
+    width: 160px;
+    font-size: 16px;
+  }
+
+  .containerBMI h2 {
+    font-size: 19px;
+  }
+
+  .labels label {
+    font-size: 16px;
+    margin-right: 60px;
+  }
+
+  .containerBMI button {
+    font-size: 14px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .BMIImg {
+    flex-wrap: wrap;
+  }
+
+  .containerImg {
+    display: none;
+  }
+
+  .containerBMI {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 465px) {
+  .labels {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .labels label {
+    margin-right: 90px;
   }
 }
