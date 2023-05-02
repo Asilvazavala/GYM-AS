@@ -37,7 +37,7 @@ export const Contact = () => {
           <input type='email' name='email' id='email' placeholder='youremail@email.com...' />
           <textarea name='message' id='message' placeholder='Your appreciate comment...' />
           <div>
-            <input className={styles.buttonForm} onclick={alert('Message submit succesfully, Thanks!')} type="submit" value="SUBMIT NOW" />
+            <input className={styles.buttonForm} onSubmit={alert('Message submit succesfully, Thanks!')} type="submit" value="SUBMIT NOW" />
           </div>
           <input type='hidden' name='_next' value='https://gym-as.vercel.app/contact' />
           <input type='hidden' name='_captcha' value='false' />
