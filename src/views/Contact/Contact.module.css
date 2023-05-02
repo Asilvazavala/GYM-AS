@@ -128,7 +128,7 @@ body {
 }
 
 /* Button Submit */
-.main .rightContainer .buttonForm {
+.main .rightContainer button {
   position: relative;
   width: 200px;
   padding: 12px 17px;
@@ -142,12 +142,12 @@ body {
   transition: .5s;
 }
 
-.main .rightContainer .buttonForm:hover {
+.main .rightContainer button:hover {
   color: #fffb00;
   border: 2px solid #fffb00;
 }
 
-.main .rightContainer .buttonForm::before {
+.main .rightContainer button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -162,7 +162,7 @@ body {
   pointer-events: none;
 }
 
-.main .rightContainer .buttonForm:hover::before {
+.main .rightContainer button:hover::before {
   width: 100%;
 }
 
