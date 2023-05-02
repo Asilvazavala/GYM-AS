@@ -1,13 +1,13 @@
-# GYM AS
+### GYM AS
 <p>Hi, this website provide a space for people to improve their physical fitness and overall health through regular exercise and physical activity, with a user friendly interface</p>
 
-# BUILD WITH:
+### BUILD WITH:
 <p>Javascript</p>
 <p>React</p> 
 <p>CSS Modules</p>
 
-# DEPENDENCIES TO RUN THE PROJECT: 
+### DEPENDENCIES TO RUN THE PROJECT: 
 <p>React Router DOM: npm i react-router-dom</p>
 
-# LIVE DEMO: 
+### LIVE DEMO: 
 <a href="" >GYM AS</a>
