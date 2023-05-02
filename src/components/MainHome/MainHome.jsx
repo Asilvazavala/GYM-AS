@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './MainHome.module.css'
+import { NavLink } from 'react-router-dom'
 
 export const MainHome = () => {
   return (
@@ -9,7 +10,9 @@ export const MainHome = () => {
           <h1>TRAIN DIFFERENT</h1>
           <h3>BODY FIT & PERFECT</h3>
           <div className={styles.btnBox}>
-            <a href='/classes'>OUR CLASSES</a>
+            <NavLink to='/classes'>
+              <a href='/classes'>OUR CLASSES</a>
+            </NavLink>
           </div>
         </div>
 
