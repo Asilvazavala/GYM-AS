@@ -23,6 +23,12 @@ function Navbar () {
   }
   changeOpacity(50)
 
+  const goTop = () => {
+    window.scrollTo({
+      top: 0
+    })
+  }
+
   // Estado para mostrar el menú que despliega la Navbar
   const [showNavbar, setShowNavBar] = useState(false)
   const showNav = () => {
@@ -50,22 +56,22 @@ function Navbar () {
           <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />
         </div>
         <nav className={isSmallScreen && showNavbar === false ? styles.hide : styles.navbar}>
-          <NavLink to='/'>
+          <NavLink to='/' onClick={goTop}>
             <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
           </NavLink>
-          <NavLink to='/about'>
+          <NavLink to='/about' onClick={goTop}>
             <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
           </NavLink>
-          <NavLink to='/gallery'>
+          <NavLink to='/gallery' onClick={goTop}>
             <a href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
           </NavLink>
-          <NavLink to='/pricing'>
+          <NavLink to='/pricing' onClick={goTop}>
             <a href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
           </NavLink>
-          <NavLink to='/classes'>
+          <NavLink to='/classes' onClick={goTop}>
             <a href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
           </NavLink>
-          <NavLink to='/contact'>
+          <NavLink to='/contact' onClick={goTop}>
             <a href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
           </NavLink>
         </nav>

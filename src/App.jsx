@@ -31,11 +31,11 @@ function App () {
       {showNavbar && <Navbar />}
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/classes' element={<Classes />} />
-        <Route path='/gallery' element={<Gallery />} />
-        <Route path='/pricing' element={<Pricing />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='https://gym-as.vercel.app/about' element={<About />} />
+        <Route path='https://gym-as.vercel.app/classes' element={<Classes />} />
+        <Route path='https://gym-as.vercel.app/gallery' element={<Gallery />} />
+        <Route path='https://gym-as.vercel.app/pricing' element={<Pricing />} />
+        <Route path='https://gym-as.vercel.app/contact' element={<Contact />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
       {showNavbar && <Footer />}
