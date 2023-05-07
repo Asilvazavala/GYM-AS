@@ -21,7 +21,7 @@
   padding: 20px 0;
   margin-right: 5%;
   padding-left: 2%;
-  background: black;
+  background: var(--bg-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
 
 .menuIcon {
   font-size: 2rem;
-  color: #fffb00;
+  color: var(--text-yellow);
   cursor: pointer;
   display: none;
 }
@@ -51,7 +51,7 @@
   margin-right: 5%;
   padding-left: 2%;
   width: 100%;
-  background: black;
+  background: var(--bg-black);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,14 +63,14 @@
   position: relative;
   padding-left: 5%;
   text-decoration: none;
-  color: #fffb00;
+  color: var(--text-yellow);
   font-weight: 800;
   font-size: 20px;
 }
 
 .navbar a {
   font-size: 18px;
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
   font-weight: 500;
   margin-right: 25px;
@@ -79,7 +79,7 @@
 
 .navbar a:hover,
 .navbar a.active {
-  color: #fffb00;
+  color: var(--text-yellow);
 }
 
 /* Responsive */

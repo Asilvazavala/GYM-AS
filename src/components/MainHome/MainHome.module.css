@@ -22,7 +22,7 @@
 }
 
 .homeContent {
-  color: white;
+  color: var(--text-white);
   max-width: 600px;
 }
 
@@ -31,7 +31,7 @@
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
-  color: #ffffff;
+  color: var(--text-white);
   overflow: hidden;
 }
 
@@ -39,7 +39,7 @@
   position: relative;
   font-size: 32px;
   font-weight: 700;
-  color: #fffb00;
+  color: var(--text-yellow);
 }
 
 .homeContent p {
@@ -64,11 +64,11 @@
   align-items: center;
   width: 150px;
   height: 100%;
-  background: #fffb00;
-  border: 2px solid #000000;
+  background: var(--button-bg);
+  border: 2px solid var(-button-border);
   border-radius: 8px;
   font-size: 15px;
-  color: #000000;
+  color: var(--button-text);
   text-decoration: none;
   font-weight: 800;
   letter-spacing: 1px;
@@ -78,8 +78,8 @@
 }
 
 .btnBox a:hover {
-  color: #fffb00;
-  border: 2px solid #fffb00;
+  color: var(--button-text-hover);
+  border: 2px solid var(--button-border-hover);
 }
 
 .btnBox a::before {
@@ -89,7 +89,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000000;
+  background: var(--button-bg-before);
   z-index: -1;
   transition: .5s;
   animation: manipActiveHover .1s forwards; 
@@ -118,10 +118,10 @@
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #fffb00;
+  border: 2px solid var(--social-border);
   border-radius: 50%;
   font-size: 20px;
-  color: #fffb00;
+  color: var(--social-text);
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
@@ -129,7 +129,7 @@
 }
 
 .homeSci a:hover {
-  color: #000000;
+  color: var(--social-text-hover);
 }
 
 .homeSci a::before {
@@ -139,7 +139,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #fffb00;
+  background: var(--social-bg-before);
   z-index: -1;
   transition: .5s;
 }

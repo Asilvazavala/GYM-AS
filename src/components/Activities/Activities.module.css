@@ -1,7 +1,7 @@
 .main h1 {
   padding-left: 5%;
   margin-top: 100px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var(--text-underline) 10px;
 }
 
 .cardsContainer {
@@ -9,7 +9,7 @@
   margin-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  color: rgb(255, 255, 255);
+  color: var(--text-white);
   display: flex;
   gap: 2%;
 }
@@ -75,9 +75,9 @@
 
 .cardsContainer span {
   font-size: 15px;
-  color: black;
+  color: var(--text-black);
   padding: 3px;
-  background: #fffb00;
+  background: var(--bg-yellow);
   position: absolute;
   top: 85%;
   left: 5%;
@@ -85,7 +85,7 @@
 
 .cardsContainer h2 {
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: var(--text-white);
   padding: 3px;
   position: absolute;
   top: 75%;

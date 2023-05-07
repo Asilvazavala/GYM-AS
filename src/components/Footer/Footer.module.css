@@ -10,8 +10,8 @@ body {
   padding-bottom: 100px;
   display: flex;
   height: 100%;
-  background: rgba(0, 0, 0, 0.885);
-  color: white;
+  background: var(--bg-semiBlack);
+  color: var(--text-white);
 }
 
 .main .leftContainer {
@@ -37,7 +37,7 @@ body {
 }
 
 .main .leftContainer p {
-  color: #fff;
+  color: var(--text-white);
   padding: 10px 0;
   font-style: italic;
   font-weight: 100;
@@ -56,10 +56,10 @@ body {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #fffb00;
+  border: 2px solid var(--social-border);
   border-radius: 50%;
   font-size: 20px;
-  color: #fffb00;
+  color: var(--social-text);
   text-decoration: none;
   z-index: 1;
   overflow: hidden;
@@ -68,7 +68,7 @@ body {
 }
 
 .homeSci a:hover {
-  color: #000000;
+  color: var(--social-text-hover);
 }
 
 .homeSci a::before {
@@ -78,7 +78,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: #fffb00;
+  background: var(--social-bg-before);
   z-index: -1;
   transition: .5s;
 }
@@ -93,12 +93,12 @@ body {
   padding: 10px 0;
   font-weight: 600;
   font-size: 20px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var(--text-underline) 10px;
 }
 
 .main .rightContainer p,
 .main .centerContainer p {
-  color: #fff;
+  color: var(--text-white);
   padding: 10px 0;
   font-style: italic;
   font-weight: 100;
@@ -106,7 +106,7 @@ body {
 
 /* rightContainer */
 .main .rightContainer .dayTitle {
-  color: #fff;
+  color: var(--text-white);
   font-weight: 900;
 }
 

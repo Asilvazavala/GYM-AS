@@ -2,25 +2,21 @@
 .title {
   padding-left: 5%;
   margin-top: 100px;
-  text-decoration: underline #fffb00 10px;
-  color: black;
+  text-decoration: underline var(--text-underline) 10px;
+  color: var(--text-black);
   margin-bottom: 40px;
   font-size: 30px;
-}
-
-body {
-  min-height: 100vh;
-  display: flex;
-  padding-bottom: 70px;
 }
 
 .container {
   perspective: 1000px;
   padding-left: 5%;
+  padding-right: 5%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 90%;
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
@@ -38,7 +34,7 @@ body {
 
 .container .slideContainer .slide {
   border-radius: 5px;
-  background: #fff;
+  background: var(--bg-white);
   box-shadow: 0 5px 10px #3337;
   width: 450px;
   padding: 20px;
@@ -70,7 +66,7 @@ body {
   top: 10px;
   right: 15px;
   font-size: 90px;
-  color: #fffb00;
+  color: var(--text-yellow);
 }
 
 .container .slideContainer .slide .user {
@@ -87,17 +83,17 @@ body {
 }
 
 .container .slideContainer .slide .user .userInfo h3 {
-  color: #333;
+  color: var(--text-black);
   font-size: 20px;
 }
 
 .container .slideContainer .slide .user .userInfo .stars i {
-  color: #fffb00;
+  color: var(--text-yellow);
   font-size: 20px;
 }
 
 .container .slideContainer .slide .text {
-  color: #333333c1;
+  color: var(--text-semiBlack);
   font-size: 14px;
   padding-top: 15px;
   font-style: italic;
@@ -116,8 +112,8 @@ body {
   line-height: 50px;
   font-size: 20px;
   text-align: center;
-  background: #333;
-  color: #fffb00;
+  background: var(--bg-semiBlack);
+  color: var(--text-yellow);
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0 5px 10px #3337;
@@ -134,8 +130,8 @@ body {
 
 .main .next:hover,
 .main .prev:hover {
-  color: #333;
-  background: #fffb00;
+  color: var(--text-black);
+  background: var(--bg-yellow);
 }
 
 /* Responsive */
@@ -172,9 +168,13 @@ body {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     .container .slideContainer .slide .quotes {
     font-size: 40px;
+  }
+
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 

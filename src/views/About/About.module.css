@@ -7,7 +7,7 @@
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  background: #fff;
+  background: var(--bg-white);
   padding: 0;
   margin: 0;
 }
@@ -29,20 +29,20 @@
 /* General */
 .main h1 {
   margin-top: 150px;
-  text-decoration: underline #fffb00 10px;
-  color: black;
+  text-decoration: underline var(--text-underline) 10px;
+  color: var(--text-black);
   margin-bottom: 20px;
 }
 
 .containerText h2 {
-  color: #000;
+  color: var(--text-black);
   font-size: 28px;
   margin-bottom: 20px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var(--text-underline) 10px;
 }
 
 .containerText h3 {
-  color: #333333c1;
+  color: var(--text-semiBlack);
   padding: 10px 0;
   font-style: italic;
   font-weight: 100;

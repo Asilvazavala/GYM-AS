@@ -5,7 +5,7 @@
 .main h1 {
   padding-left: 5%;
   margin-top: 100px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var(--text-underline) 10px;
 }
 
 .hide {
@@ -18,24 +18,22 @@
   margin-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  color: rgb(0, 0, 0);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  color: var(--text-black);
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  width: 90%;
 }
 
 .cardsContainer .card {
-  border: 1px solid black;
+  border: 1px solid var(--border-black);
   border-radius: 20px;
-  background: white;
+  background: var(--bg-white);
   text-align: center;  
   transition: .7s linear;
   box-shadow: 4px 4px 4px 4px #3337;
   overflow: hidden;
   padding-bottom: 230px;
-  flex-grow: 1;
-  flex-basis: 280px;
-  max-width: 400px;
 }
 
 .cardsContainer .card img {
@@ -47,18 +45,18 @@
 }
 
 .cardsContainer .card h2 {
-  color: #000;
+  color: var(--text-black);
   font-weight: 600;
   font-size: 25px;
   margin-bottom: 15px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var(--text-underline) 10px;
   margin-bottom: 15px;
 }
 
 .cardsContainer .card h3 {
   font-size: 18px;
   margin-bottom: 15px;
-  color: #333333c1;
+  color: var(--text-semiBlack);
   font-style: italic;
   font-weight: 100;
 }
@@ -86,24 +84,24 @@
 }
 
 .cardsContainer button {
-  background: #fffb00;
-  color: #000000;
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .main .showMore button {
-  background: #000000;
-  color: #fffb00;
-  border: 2px solid #fffb00;
+  background: var(--bg-black);
+  color: var(--text-yellow);
+  border: 2px solid var(--border-yellow);
 }
 
 .main .showMore button:hover {
-  color: #000000;
-  border: 2px solid #000000;
+  color: var(--text-black);
+  border: 2px solid var(--border-black);
 }
 
 .cardsContainer button:hover {
-  color: #fffb00;
-  border: 2px solid #fffb00;
+  color: var(--button-text-hover);
+  border: 2px solid var(--button-border-hover);
 }
 
 .main .showMore button::before,
@@ -122,11 +120,11 @@
 }
 
 .cardsContainer button::before {
-  background: #000000;
+  background: var(--button-bg-before);
 }
 
 .main .showMore button::before {
-  background: #fffb00;
+  background: var(--bg-yellow);
 }
 
 .main button:hover::before,
@@ -138,5 +136,11 @@
 @keyframes manipActiveHover {
   100% {
     pointer-events: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardsContainer {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }

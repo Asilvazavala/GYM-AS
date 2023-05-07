@@ -1,3 +1,33 @@
+:root {
+  --text-white: #fff;
+  --text-underline: #fffb00;
+  --text-black: #000;
+  --text-yellow: #fffb00;
+  --text-semiBlack: #333333c1;
+
+  --bg-yellow: #fffb00;
+  --bg-semiBlack: rgba(0, 0, 0, 0.885);
+  --bg-black: #000;
+  --bg-white: #fff;
+
+  --border-black: #000;
+  --border-yellow: #fffb00;
+
+  --button-text: #000;
+  --button-bg: #fffb00;
+  --button-border: #000;
+  --button-text-hover: #fffb00;
+  --button-border-hover: #fffb00;
+  --button-bg-before: #000;
+
+  --social-text: #fffb00;
+  --social-bg: #fffb00;
+  --social-border: #fffb00;
+  --social-text-hover: #000;
+  --social-border-hover: #000;
+  --social-bg-before: #fffb00;
+}
+
 body {
   background: rgb(232, 232, 232);
 }

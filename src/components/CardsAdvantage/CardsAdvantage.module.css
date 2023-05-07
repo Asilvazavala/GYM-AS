@@ -4,26 +4,24 @@
   margin-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  color: rgb(0, 0, 0);
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
+  color: var(--text-black);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 90%;
 }
 
 .card,
 .card2, 
 .card3 {
-  border: 1px solid black;
+  border: 1px solid var(--border-black);
   border-top-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  background: white;
+  background: var(--bg-white);
   padding: 70px 20px;
   text-align: center;  
   transition: .7s linear;
   box-shadow: 4px 4px 4px 4px #3337;
-  flex-basis: 300px;
-  max-width: 350px;
-  flex-grow: 1;
 }
 
 .card:hover h2, 
@@ -32,7 +30,7 @@
 .card2:hover h3,
 .card3:hover h2, 
 .card3:hover h3 {
-  color: white;
+  color: var(--text-white);
 }
 
 .card:hover {
@@ -62,21 +60,21 @@
   width: 50px;
   height: 50px;
   font-size: 50px;
-  background: #000000;
-  color: #fffb00;
+  background: var(--bg-black);
+  color: var(--text-yellow);
   overflow: hidden;
   margin-bottom: 15px;
 }
 
 .cardsContainer h2 {
-  color: #000000;
+  color: var(--text-black);
   font-weight: 600;
   font-size: 25px;
   margin-bottom: 15px;
 }
 
 .cardsContainer h3 {
-  color: #000000;
+  color: var(--text-black);
   font-weight: 100;
   font-size: 15px;
 }
@@ -84,7 +82,7 @@
 .main h1 {
   padding-left: 5%;
   margin-top: 100px;
-  text-decoration: underline #fffb00 10px;
+  text-decoration: underline var( --text-underline) 10px;
 }
 
 /* Responsive */

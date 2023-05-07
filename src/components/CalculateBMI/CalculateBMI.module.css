@@ -14,7 +14,7 @@
   max-width: 50%;
   height: auto;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.885);
+  background: var(--bg-semiBlack);
   position: relative;
 }
 
@@ -30,13 +30,13 @@
 .main h1 {
   padding-left: 5%;
   margin-top: 100px;
-  text-decoration: underline #fffb00 10px;
-  color: black;
+  text-decoration: underline var(--text-underline) 10px;
+  color: var(--text-black);
   margin-bottom: 20px;
 }
 
 .containerBMI h2 {
-  color: #fffb00;
+  color: var(--text-yellow);
   font-size: 20px;
   margin-bottom: 20px;
 }
@@ -60,12 +60,12 @@
 .labels label {
   margin-right: 120px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: var(--text-white);
   font-size: 18px;
 }
 
 .labels span {
-  color: #fffb00;
+  color: var(--text-yellow);
 }
 
 .main .containerBMI button {
@@ -74,8 +74,8 @@
   padding: 12px 17px;
   font-size: 15px;
   cursor: pointer;
-  background: #fffb00;
-  color: #000000;
+  background: var(--button-bg);
+  color: var(--button-text);
   font-weight: 700;
   z-index: 1;
   overflow: hidden;
@@ -86,8 +86,8 @@
 }
 
 .main .containerBMI button:hover {
-  color: #fffb00;
-  border: 2px solid #fffb00;
+  color: var(--button-text-hover);
+  border: 2px solid var(--button-border-hover);
 }
 
 .main .containerBMI button::before {
@@ -97,7 +97,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #000000;
+  background: var(--button-bg-before);
   z-index: -1;
   transition: .5s;
   animation: manipActiveHover .5s forwards; 
