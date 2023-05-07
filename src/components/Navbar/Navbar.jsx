@@ -57,22 +57,22 @@ function Navbar () {
         </div>
         <nav className={isSmallScreen && showNavbar === false ? styles.hide : styles.navbar}>
           <NavLink to='/' onClick={goTop}>
-            <a href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
+            <a onClick={isSmallScreen && showNav} href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
           </NavLink>
           <NavLink to='/about' onClick={goTop}>
-            <a href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
+            <a onClick={isSmallScreen && showNav} href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
           </NavLink>
           <NavLink to='/gallery' onClick={goTop}>
-            <a href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
+            <a onClick={isSmallScreen && showNav} href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
           </NavLink>
           <NavLink to='/pricing' onClick={goTop}>
-            <a href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
+            <a onClick={isSmallScreen && showNav} href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
           </NavLink>
           <NavLink to='/classes' onClick={goTop}>
-            <a href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
+            <a onClick={isSmallScreen && showNav} href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
           </NavLink>
           <NavLink to='/contact' onClick={goTop}>
-            <a href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
+            <a onClick={isSmallScreen && showNav} href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
           </NavLink>
         </nav>
       </header>
