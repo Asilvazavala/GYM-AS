@@ -68,17 +68,17 @@
   font-size: 20px;
 }
 
-.navbar a {
+.navbar span {
   font-size: 18px;
   color: var(--text-white);
   text-decoration: none;
   font-weight: 500;
-  margin-right: 25px;
+  margin-right: 55px;
   transition: .3s;
 }
 
-.navbar a:hover,
-.navbar a.active {
+.navbar span:hover,
+.navbar span.active {
   color: var(--text-yellow);
 }
 

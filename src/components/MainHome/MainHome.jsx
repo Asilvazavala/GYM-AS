@@ -11,7 +11,7 @@ export const MainHome = () => {
           <h3>BODY FIT & PERFECT</h3>
           <div className={styles.btnBox}>
             <NavLink to='/classes'>
-              <a href='/classes'>OUR CLASSES</a>
+              <span href='/classes'>OUR CLASSES</span>
             </NavLink>
           </div>
         </div>

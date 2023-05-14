@@ -48,6 +48,11 @@ function Navbar () {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
+  // Cuando la pantalla es de dispositivo movil, cerrar la navbar cuando se hace clic en una pestaña
+  const closeNavbar = () => {
+    if (isSmallScreen) showNav()
+  }
+
   return (
     <div>
       <header id='navBar' className={styles.header}>
@@ -57,22 +62,22 @@ function Navbar () {
         </div>
         <nav className={isSmallScreen && showNavbar === false ? styles.hide : styles.navbar}>
           <NavLink to='/' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</a>
+            <span onClick={closeNavbar} href='/' className={window.location.href === BASE_URL ? styles.active : ''}>Home</span>
           </NavLink>
           <NavLink to='/about' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</a>
+            <span onClick={closeNavbar} href='/about' className={window.location.href === BASE_URL + 'about' ? styles.active : ''}>About</span>
           </NavLink>
           <NavLink to='/gallery' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</a>
+            <span onClick={closeNavbar} href='/gallery' className={window.location.href === BASE_URL + 'gallery' ? styles.active : ''}>Gallery</span>
           </NavLink>
           <NavLink to='/pricing' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</a>
+            <span onClick={closeNavbar} href='/pricing' className={window.location.href === BASE_URL + 'pricing' ? styles.active : ''}>Pricing</span>
           </NavLink>
           <NavLink to='/classes' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</a>
+            <span onClick={closeNavbar} href='/classes' className={window.location.href === BASE_URL + 'classes' ? styles.active : ''}>Classes</span>
           </NavLink>
           <NavLink to='/contact' onClick={goTop}>
-            <a onClick={isSmallScreen && showNav} href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</a>
+            <span onClick={closeNavbar} href='/contact' className={window.location.href === BASE_URL + 'contact' ? styles.active : ''}>Contact</span>
           </NavLink>
         </nav>
       </header>
