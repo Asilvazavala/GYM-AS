@@ -8,19 +8,19 @@
 
 ### BUILD WITH:
 
-<h3>- Javascript</h3>
-<h3>- React</h3>
-<h3>- CSS Modules</h3>
+<p>- Javascript</p>
+<p>- React</p>
+<p>- CSS Modules</p>
 
 ---
 
 ### DEPENDENCIES TO RUN THE PROJECT:
 
-<h3>- React Router DOM: npm i react-router-dom</h3>
-<h3>- Start project: npm run dev</h3>
+<p>- React Router DOM: npm i react-router-dom</p>
+<p>- Start project: npm run dev</p>
 
 ---
 
 ### LIVE DEMO: 
 
-<h3><a href="https://gym-as.vercel.app/" >LINK TO GYM AS</a></h3>
+<p><a href="https://gym-as.vercel.app/" >LINK TO GYM AS</a></p>
