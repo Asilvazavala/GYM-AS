@@ -31,16 +31,18 @@ export const Contact = () => {
       </div>
 
       <div className={styles.rightContainer}>
-        <form action='https://formsubmit.co/asilvazavala@gmail.com' method='POST'>
+        <form id='form' action='https://formsubmit.co/asilvazavala@gmail.com' method='POST'>
           <h3>Leave Us Your Info</h3>
-          <input type='text' name='name' id='name' placeholder='Antonio silva...' />
-          <input type='email' name='email' id='email' placeholder='youremail@email.com...' />
-          <textarea name='message' id='message' placeholder='Your appreciate comment...' />
+          <input required type='text' name='name' id='name' placeholder='your name...' />
+          <input required type='email' name='email' id='email' placeholder='youremail@email.com...' />
+          <textarea required name='message' id='message' placeholder='Your appreciate comment...' />
           <div>
-            <button>SUBMIT NOW</button>
+            <button type='submit'>SUBMIT NOW</button>
           </div>
+          {/* Redirigir al enviar mensaje */}
           <input type='hidden' name='_next' value='https://gym-as.vercel.app/contact' />
-          <input type='hidden' name='_captcha' value='false' />
+          {/* Autoresponse */}
+          <input type='hidden' name='_autoresponse' value='Gracias por tu mensaje, te responderé en breve.' />
         </form>
       </div>
 
