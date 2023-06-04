@@ -55,7 +55,7 @@ function Navbar () {
 
   return (
     <div>
-      <header id='navBar' className={styles.header}>
+      <header id='navBar' className={window.location.href === BASE_URL ? styles.headerOpacity : styles.header}>
         <img src={LogoAS} alt='LogoAS' title='Antonio Silva' />
         <div id='menuIcon' className={styles.menuIcon}>
           <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />
