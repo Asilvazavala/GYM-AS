@@ -4,8 +4,8 @@ import LogoAS from '../../images/Icon/LogoAS.png'
 import { NavLink } from 'react-router-dom'
 
 function Navbar () {
-  // const BASE_URL = 'http://localhost:3003/'
-  const BASE_URL = 'https://gym-as.vercel.app/'
+  const BASE_URL = 'http://localhost:3003/'
+  // const BASE_URL = 'https://gym-as.vercel.app/'
 
   // Navbar cambia a fondo negro al hacer scroll
   const changeOpacity = (pxPantalla) => {
@@ -13,7 +13,7 @@ function Navbar () {
       const scroll = document.documentElement.scrollTop
       const navBar = document.getElementById('navBar')
       if (navBar) {
-        if (scroll > pxPantalla) {
+        if (window.location.href === BASE_URL && scroll < pxPantalla) {
           navBar.className = styles.headerOpacity
         } else {
           navBar.className = styles.header
@@ -55,7 +55,7 @@ function Navbar () {
 
   return (
     <div>
-      <header id='navBar' className={window.location.href === BASE_URL ? styles.headerOp : styles.header}>
+      <header id='navBar'>
         <img src={LogoAS} alt='LogoAS' title='Antonio Silva' />
         <div id='menuIcon' className={styles.menuIcon}>
           <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />
