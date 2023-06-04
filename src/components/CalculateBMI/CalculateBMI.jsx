@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import styles from './CalculateBMI.module.css'
 import imgGym from '../../images/gym15.jpg'
+import { ToastContainer } from 'react-toastify'
+import { useNotification } from '../../hooks/useNotification'
 
 export const CalculateBMI = () => {
+  const { notificationError } = useNotification()
   const [input, setInput] = useState({
     weight: '',
     height: '',
@@ -16,7 +19,7 @@ export const CalculateBMI = () => {
 
   const calculateBMI = () => {
     if (!input.height || !input.weight) {
-      alert('Please complete Height/Weight')
+      notificationError('Please complete Height/Weight')
     } else {
       // Calculate BMI
       let BMI = Number(input.height)
@@ -53,12 +56,12 @@ export const CalculateBMI = () => {
             <label>Your BMI is: <span>{input.BMI}</span></label>
             <label>Your weight is: <span>{input.weightBMI}</span></label>
           </div>
-
+          <ToastContainer />
           <button onClick={() => calculateBMI()}>CALCULATE</button>
         </div>
 
         <div className={styles.containerImg}>
-          <img src={imgGym} alt='BMI img' />
+          <img loading='lazy' decoding='async' src={imgGym} alt='BMI img' />
         </div>
 
       </div>

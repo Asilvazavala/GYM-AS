@@ -7,7 +7,7 @@ export const Whatsapp = () => {
       <a
         target='_blank'
         rel='noopener noreferrer'
-        href='https://api.whatsapp.com/send?phone='
+        href='https://api.whatsapp.com/send?phone=524561148433'
       >
         <i className='bx bxl-whatsapp' />
       </a>

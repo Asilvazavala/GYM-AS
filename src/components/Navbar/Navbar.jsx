@@ -4,7 +4,7 @@ import LogoAS from '../../images/Icon/LogoAS.png'
 import { NavLink } from 'react-router-dom'
 
 function Navbar () {
-  // const BASE_URL = 'http://localhost:3002/'
+  // const BASE_URL = 'http://localhost:3003/'
   const BASE_URL = 'https://gym-as.vercel.app/'
 
   // Navbar cambia a fondo negro al hacer scroll
@@ -55,7 +55,7 @@ function Navbar () {
 
   return (
     <div>
-      <header id='navBar' className={styles.header}>
+      <header id='navBar' className={window.location.href === BASE_URL ? styles.headerOp : styles.header}>
         <img src={LogoAS} alt='LogoAS' title='Antonio Silva' />
         <div id='menuIcon' className={styles.menuIcon}>
           <i onClick={showNav} className={showNavbar === false ? 'bx bx-menu' : 'bx bx-x'} />

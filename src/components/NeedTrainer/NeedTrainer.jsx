@@ -14,7 +14,7 @@ export const NeedTrainer = () => {
       <h1>NEED A TRAINER?</h1>
       <div className={styles.containerNeedTrainer}>
         <div className={styles.containerImg}>
-          <img src={imgGym} alt='BMI img' />
+          <img loading='lazy' decoding='async' src={imgGym} alt='BMI img' />
         </div>
         <div className={styles.containerTextButton}>
           <h2>Easily find the right fitness coach for your needs</h2>

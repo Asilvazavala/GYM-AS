@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Classes.module.css'
 import imgGym from '../../images/gym15.jpg'
-import imgGym2 from '../../images/Home/Cycling.jpg'
+import imgGym2 from '../../images/Home/Cycling.webp'
 import imgGym3 from '../../images/Home/Karate.jpg'
 import imgGym4 from '../../images/gym1.jpg'
 import imgGym5 from '../../images/gym2.jpg'

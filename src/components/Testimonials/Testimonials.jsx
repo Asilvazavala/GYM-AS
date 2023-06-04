@@ -62,7 +62,7 @@ export const Testimonials = () => {
                 <div className={styles.slide}>
                   <i className={`${styles.quotes} bx bxs-quote-right`} />
                   <div className={styles.user}>
-                    <img src={el.image} alt='imgGym' />
+                    <img loading='lazy' decoding='async' src={el.image} alt='imgGym' />
                     <div className={styles.userInfo}>
                       <h3>{el.name}</h3>
                       <div className={styles.stars}>

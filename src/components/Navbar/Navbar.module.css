@@ -13,6 +13,7 @@
 }
 
 /* Header */
+.headerOp,
 .header {
   position: fixed;
   top: 0;
@@ -26,6 +27,9 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+}
+
+.headerOp {
   opacity: 0.7;
 }
 
@@ -37,6 +41,7 @@
 }
 
 .headerOpacity img,
+.headerOp img,
 .header img {
   width: 55px;
   height: 45px;
@@ -91,6 +96,7 @@
 }
 
 @media (max-width: 768px) {
+  .headerOp img,
   .headerOpacity img,
   .header img {
     position: absolute;
@@ -98,6 +104,7 @@
     left: 3%;  
   }
 
+  .headerOp,
   .headerOpacity,
   .header {
     min-height: 30px;  
