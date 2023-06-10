@@ -1,7 +1,11 @@
 import React from 'react'
 import styles from './Contact.module.css'
+import { ToastContainer } from 'react-toastify'
+import { useInput } from '../../hooks/useInput'
 
 export const Contact = () => {
+  const { input, handleChange, handleNotification } = useInput()
+
   return (
     <div className={styles.main}>
 
@@ -33,16 +37,17 @@ export const Contact = () => {
       <div className={styles.rightContainer}>
         <form id='form' action='https://formsubmit.co/asilvazavala@gmail.com' method='POST'>
           <h3>Leave Us Your Info</h3>
-          <input required type='text' name='name' id='name' placeholder='your name...' />
-          <input required type='email' name='email' id='email' placeholder='youremail@email.com...' />
-          <textarea required name='message' id='message' placeholder='Your appreciate comment...' />
+          <input onChange={(e) => handleChange(e)} value={input.name} required type='text' name='name' id='name' placeholder='your name...' />
+          <input onChange={(e) => handleChange(e)} value={input.email} required type='email' name='email' id='email' placeholder='youremail@email.com...' />
+          <textarea onChange={(e) => handleChange(e)} value={input.message} required name='message' id='message' placeholder='Your appreciate comment...' />
           <div>
-            <button type='submit'>SUBMIT NOW</button>
+            <button className={styles.buttonSubmit} onClick={handleNotification} type='submit'>SUBMIT NOW</button>
           </div>
           {/* Redirigir al enviar mensaje */}
           <input type='hidden' name='_next' value='https://gym-as.vercel.app/contact' />
           {/* Autoresponse */}
           <input type='hidden' name='_autoresponse' value='Gracias por tu mensaje, te responderé en breve.' />
+          <ToastContainer />
         </form>
       </div>
 

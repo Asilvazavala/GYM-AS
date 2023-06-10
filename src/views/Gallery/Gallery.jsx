@@ -68,15 +68,15 @@ export const Gallery = () => {
 
   const handleNextImage = () => {
     const findImage = images.findIndex(el => el.id === selectedImage.id)
-    findImage < 9 ?
-      setSelectedImage(images[findImage + 1])
+    findImage < 9
+      ? setSelectedImage(images[findImage + 1])
       : setSelectedImage(images[0])
   }
 
   const handlePrevImage = () => {
     const findImage = images.findIndex(el => el.id === selectedImage.id)
-    findImage > 2 ?
-      setSelectedImage(images[findImage - 1])
+    findImage > 2
+      ? setSelectedImage(images[findImage - 1])
       : setSelectedImage(images[images.length - 1])
   }
 

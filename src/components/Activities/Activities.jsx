@@ -1,13 +1,10 @@
 import React from 'react'
 import styles from './Activities.module.css'
 import { NavLink } from 'react-router-dom'
+import { useNavBar } from '../../hooks/useNavBar'
 
 export const Activities = () => {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0
-    })
-  }
+  const { goTop } = useNavBar()
 
   return (
     <div className={styles.main}>

@@ -2,12 +2,10 @@ import React from 'react'
 import styles from './NeedTrainer.module.css'
 import imgGym from '../../images/gym7.jpg'
 import { NavLink } from 'react-router-dom'
+import { useNavBar } from '../../hooks/useNavBar'
+
 export const NeedTrainer = () => {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0
-    })
-  }
+  const { goTop } = useNavBar()
 
   return (
     <div className={styles.main}>

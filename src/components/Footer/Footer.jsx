@@ -2,13 +2,10 @@ import React from 'react'
 import styles from './Footer.module.css'
 import LogoAS from '../../images/Icon/LogoAS.png'
 import { NavLink } from 'react-router-dom'
+import { useNavBar } from '../../hooks/useNavBar'
 
 export const Footer = () => {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0
-    })
-  }
+  const { goTop } = useNavBar()
 
   return (
     <footer>

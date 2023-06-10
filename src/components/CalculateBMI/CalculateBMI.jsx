@@ -1,44 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './CalculateBMI.module.css'
 import imgGym from '../../images/gym15.jpg'
 import { ToastContainer } from 'react-toastify'
-import { useNotification } from '../../hooks/useNotification'
+import { useInputBMI } from '../../hooks/useInputBMI'
 
 export const CalculateBMI = () => {
-  const { notificationError } = useNotification()
-  const [input, setInput] = useState({
-    weight: '',
-    height: '',
-    BMI: '',
-    weightBMI: ''
-  })
-
-  const handleChange = (e) => {
-    setInput({ ...input, [e.target.name]: e.target.value })
-  }
-
-  const calculateBMI = () => {
-    if (!input.height || !input.weight) {
-      notificationError('Please complete Height/Weight')
-    } else {
-      // Calculate BMI
-      let BMI = Number(input.height)
-      BMI > 100 ?
-        BMI = Number(input.weight / ((input.height / 100) * (input.height / 100))).toFixed(1)
-        : BMI = Number(input.weight / (input.height * input.height)).toFixed(1)
-
-      // Calculate Weight in base BMI
-      let weightBMI = 'Normal'
-      if (BMI > 30) {
-        weightBMI = 'Overweight'
-      } else if (BMI < 18.5) {
-        weightBMI = 'Underweight'
-      }
-
-      // Update inputs
-      setInput({ ...input, BMI, weightBMI })
-    }
-  }
+  const { input, handleChange, calculateBMI } = useInputBMI()
 
   return (
     <div className={styles.main}>
@@ -56,9 +23,9 @@ export const CalculateBMI = () => {
             <label>Your BMI is: <span>{input.BMI}</span></label>
             <label>Your weight is: <span>{input.weightBMI}</span></label>
           </div>
-          <ToastContainer />
-          <button onClick={() => calculateBMI()}>CALCULATE</button>
+          <button className={styles.buttonCalculate} onClick={() => calculateBMI()}>CALCULATE</button>
         </div>
+        <ToastContainer />
 
         <div className={styles.containerImg}>
           <img loading='lazy' decoding='async' src={imgGym} alt='BMI img' />

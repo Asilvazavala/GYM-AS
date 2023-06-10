@@ -4,13 +4,10 @@ import imgGym from '../../images/gym3.jpg'
 import imgGym2 from '../../images/gym13.jpeg'
 import imgGym3 from '../../images/gym1.jpg'
 import { NavLink } from 'react-router-dom'
+import { useNavBar } from '../../hooks/useNavBar'
 
 export const Prices = () => {
-  const goTop = () => {
-    window.scrollTo({
-      top: 0
-    })
-  }
+  const { goTop } = useNavBar()
 
   return (
     <div>
