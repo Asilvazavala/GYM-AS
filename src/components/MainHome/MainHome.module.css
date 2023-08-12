@@ -27,7 +27,6 @@
 }
 
 .homeContent h1 {
-  position: relative;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
@@ -36,20 +35,12 @@
 }
 
 .homeContent h3 {
-  position: relative;
   font-size: 32px;
   font-weight: 700;
   color: var(--text-yellow);
 }
 
-.homeContent p {
-  position: relative;
-  font-size: 16px;
-  margin: 20px 0 40px;
-}
-
 .homeContent .btnBox {
-  position: relative;
   display: flex;
   justify-content: space-between;
   width: 345px;
@@ -162,53 +153,66 @@
 }
 
 /* Responsive */
-@media (max-width: 1050px) {
-  .home .homeSci a,
-  .home .btnBox a {
-    font-size: 1.1rem;
+@media (max-width:800px) {
+  .home .homeContent h3,
+  .home .homeContent h1 {
+    font-size: 2.5rem;
+    text-align: center;
   }
 
+  .home {
+    padding-left: 2%;
+  }
+
+  .home .btnBox a {
+    font-size: 1.2rem;
+    width: 95%;
+  
+  }
+  .home .homeSci a {
+    font-size: 1.9rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .homeSci {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  .btnBox, 
+  .homeContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width:500px) {
   .home .homeContent h3,
   .home .homeContent h1 {
     font-size: 2rem;
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width:370px) {
   .home .homeContent h3,
   .home .homeContent h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-}
 
-@media (max-width: 550px) {
   .home .btnBox a {
-    font-size: 0.8rem;
-    width: 8rem;
-    height: 2.5rem;
-  }
-
-  .home .homeSci a {
-    font-size: 0.9rem;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .home .homeContent h3,
-  .home .homeContent h1 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 340px) {
-  .home .homeContent h3,
-  .home .homeContent h1 {
     font-size: 1rem;
+    width: 80%;
   }
 
-  .home .btnBox a {
-    font-size: 0.7rem;
-    width: 6rem;
-    height: 2rem;
+  .home {
+    padding-left: 0%;
   }
 }
+
