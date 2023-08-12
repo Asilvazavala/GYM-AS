@@ -200,7 +200,7 @@
   }
 }
 
-@media (max-width:370px) {
+@media (max-width:350px) {
   .home .homeContent h3,
   .home .homeContent h1 {
     font-size: 1.6rem;
